@@ -1,0 +1,220 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color:hsl(202, 86%, 94%) ;
+    height: 100%;
+    display: flex;
+   /* align-items: center;
+   justify-content: center; */
+   font-family: 'Plus Jakarta', sans-serif;
+
+}
+
+main{
+    width: 60%;
+    height: 80vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;   /*splits the tag into equal halves*/
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% ,-50%);
+  background-color: white;
+  border-radius: 10px;
+}
+
+.result{
+    background-color:hsl(202, 55%, 16%) ;
+    border-bottom-right-radius: 15px;
+    border-top-right-radius: 15px;
+    border-bottom-left-radius: 70px;
+   text-align: center;
+   color: white;
+   padding: 1rem;
+
+}
+#pay-image{
+    position: absolute;
+    top: 20%;
+    right:15% ;
+    
+}
+.shown{
+   position: absolute;
+    bottom: 30%;
+    right:10% ;
+    font-size: 2em;
+}
+
+.statement{
+   position: absolute;
+    bottom: 20%;
+    padding-left: 1rem;
+}
+
+.mortgage{
+    background-color: white;
+    border-bottom-left-radius: 25px;
+    border-top-left-radius: 25px;
+    padding: 2rem;
+}
+
+.heading{
+    display: flex;
+    justify-items: space-between;
+    gap: 5.5rem;
+    
+}
+
+h1{
+    font-size: 1.5em;
+    color:hsl(202, 55%, 16%) ;
+}
+
+.clear{
+    outline: none;
+    border: none;
+    background-color: white;
+    text-decoration: underline;
+}
+
+.holder{
+    margin-top: 3rem;
+}
+
+#mort-amount{
+    color:hsl(200, 24%, 40%) ;
+    
+}
+
+#euro{
+    height: 5vh;
+    width: 100%;
+    outline: none;
+    border: none;
+  
+}
+
+.input-box{
+    display: flex;
+    padding-left: 0.8em;
+    border: 1px solid hsl(203, 22%, 57%);
+    border-radius: 3px;
+    background-color: hsl(202, 86%, 94%);
+    text-align: center;
+    margin-top: 0.6rem;
+}
+
+.input-box:focus-within{
+    background-color: hsl(61, 70%, 52%);
+    border-color: hsl(61, 70%, 52%);
+}
+span{
+    padding-top: 0.5rem;
+    padding-right: 0.5rem;
+    color:hsl(202, 55%, 16%) ;
+}
+
+label{
+    color: hsl(200, 24%, 40%);
+}
+
+.terms-inputs{
+    display: flex;
+    gap: 15px;
+}
+
+.terms{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    margin: 2em 0em 0em 0em;
+}
+
+.input-box1, .input-box2 {
+    display: flex;
+    align-items: center;
+    border: 1px solid hsl(203, 22%, 57%);
+    border-radius: 3px;
+    padding-right: 5px;
+    margin-top: 8px;
+    background-color: hsl(202, 86%, 94%);;
+    
+}
+
+.input-box1:focus-within, .input-box2:focus-within{
+   background-color:hsl(61, 70%, 52%) ;
+    border-color: hsl(61, 70%, 52%);
+}
+
+.types:checked{
+    background-color:hsl(61, 70%, 52%) ;
+    border-color: hsl(61, 70%, 52%);
+}
+
+#years{
+    height: 5vh;
+    width: 78%;
+    outline: none;
+    border: none; 
+}
+
+.input-years{
+    padding-left: 1rem;
+    padding-bottom: 0.5rem;
+}
+
+.all-mortgage{
+    margin-top: 1.5rem;
+}
+
+.type1, .type2{
+    border: 1px solid hsl(200, 24%, 40%) ;
+    height:6vh ;
+    margin-top: 0.5rem;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    padding-left: 1rem;
+    gap: 1rem;
+    font-weight: 700;
+    color: hsl(202, 55%, 16%);
+}
+.type1:active, .type2:active{
+    background-color:hsl(61, 70%, 52%) ;
+    border-color: hsl(61, 70%, 52%);
+    
+}
+
+#RepaymentOption{
+    accent-color:hsl(61, 70%, 52%)  ;
+}
+
+input[type="radio"]:active{
+    accent-color:hsl(61, 70%, 52%) ; ;
+}
+
+
+.InterestOption{
+    margin-top: 10px;
+}
+
+.calculation{
+    height: 6.5vh;
+    width: 70%;
+    margin: 3rem 0rem 0rem 0rem;
+    border: none;
+    border-radius: 20px;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     background-color:hsl(61, 70%, 52%) ;
+     font-weight: 700;
+     font-size: 1em;
+     color:hsl(202, 55%, 16%) ;
+     gap: 0.6rem;
+}

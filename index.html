@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="styles.css">
+  <title>Frontend Mentor | Mortgage repayment calculator</title>
+
+</head>
+
+<body>
+
+      <main class="wrapper">
+           
+           <div class="mortgage">
+
+            <div class="heading">
+                <h1 >Mortgage Calculator</h1>
+                <button type="reset" class="clear">Clear All</button>
+            </div>
+
+           <div class="holder">
+                    <label  id="mort-amount">Mortgage Amount</label>
+
+                      <div class="input-box">
+                            <span>£</span>
+                           <input type="number" id="euro">
+                    </div>
+           </div>
+       <div class="terms-inputs">
+
+           <div class="terms">
+                   <label  id="mort-terms">Mortgage terms</label>
+                      <section class="input-box1">
+                           <input type="number" id="years"  >
+                           <span class="input-years">years</span> 
+                      </section>
+           </div>
+
+            <div class="terms">
+                      <label  id="mort-interest">Interest rate</label>
+                      <section class="input-box2">
+                           <input type="number" id="years"  >
+                           <span class="input-years">%</span>
+                      </section>
+
+                    </div>
+           </div>
+            <div class="all-mortgage">
+                     <label class="typeOfMortgage">Mortgage Type</label>
+
+                    <div class="mortgage-type">
+                         <section class="type1">
+                          <input type="radio" id="RepaymentOption" value="Repayment" class="types">Repayment
+                        </section>
+
+                        <section class="type2">
+                             <input type="radio" id="InterestOption" value="Interest-Only" class="types">Interest-Only
+                        </section>
+                    </div>
+            </div>
+
+                 <div class="submission">
+                  <button type="submit" class="calculation">
+                    <img src="assets/images/icon-calculator.svg" alt="calculator">
+                    Calculate Repayments
+                  </button>
+
+                </div>
+
+           </div>
+
+           <div class="result">
+            <img src="assets/images/illustration-empty.svg" alt="illustration-empty" id="pay-image">
+
+            <h2 class="shown">Results shown here</h2>
+
+            <p class="statement">Complete the form and click “calculate repayments” to<br> see what your monthly repayments would be.</p>
+           </div>
+
+      </main>
+  
+  
+  
+</body>
+</html>

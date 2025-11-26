@@ -14,10 +14,20 @@ function CalculateMortgage(events){
     const parentInputbox1= mortgageTerms.parentElement;
     const parentInputbox2= mortgageInterest.parentElement;
 
-    let AmountText1= mortgageAmount.value.split(',').join('');
-     let numberValueMortgageAmount = Number(AmountText1);
 
-     console.log('clean amount:',numberValueMortgageAmount);
+   //  mortgageAmount.addEventListener('blur',function(){
+   //          let quoteAmount=mortgageAmount.value;
+   //          let goodText= quoteAmount.split(',').join('');
+   //          let numberValueMortgageAmount=Number(goodText);
+            
+   //          if (isNaN(numberValueMortgageAmount)===false){
+   //             mortgageAmount.value=numberValueMortgageAmount.toLocaleString();
+   //          }
+   //  })
+    
+   let AmountText1 = mortgageAmount ? mortgageAmount.value.split(',').join('') : "0";
+    let numberValueMortgageAmount = Number(AmountText1);
+   console.log('clean amount:',numberValueMortgageAmount);
 
     function showError(userMort, message){
 
@@ -57,6 +67,22 @@ function CalculateMortgage(events){
                showError(optionsContainer,'This field is required');
          }
     isValid=false;
+ }
+ if(isValid){
+       let principalAmount=mortgageAmount.value;
+       let interestRate= mortgageInterest.value;
+       let ratingYears= mortgageTerms.value;
+       let repaymentsMonthly=0;
+
+       if (mortgageOptions.value === 'Repayment') {
+            let monthlyRate = (interest / 100) / 12;
+            let n = terms * 12;
+            repaymentsMonthly= numberValueMortgageAmount * monthlyRate * (Math.pow(1 + monthlyRate, n)) / (Math.pow(1 + monthlyRate, n) - 1);
+        } 
+        else if (mortgageOptions.value === 'Interest-Only') {
+            monthlyRepayment = (numberValueMortgageAmount * (interestRate/ 100)) / 12;
+        }
+
  }
 }
 

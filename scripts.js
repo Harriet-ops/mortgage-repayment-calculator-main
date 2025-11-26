@@ -19,6 +19,7 @@ function CalculateMortgage(events){
     function showError(userMort, message){
 
         userMort.classList.add('MessageError');
+         
 
         let errorMsg = document.createElement('p');
         errorMsg.className = 'error';
@@ -34,15 +35,17 @@ function CalculateMortgage(events){
 
     if(  mortgageAmount.value===""){
         showError(mortgageAmount, 'This field is required');
-        isValid=false
+       
     }
 
  if( mortgageTerms.value===""){
     showError( mortgageTerms,'This field is required')
+    mortgageTerms.classList.add('invalid');
     isValid=false
  }
  if(mortgageInterest.value===""){
-    showError(mortgageInterest, 'This field is required')
+    showError(mortgageInterest, 'This field is required');
+    mortgageInterest.classList.add('invalid');
     isValid=false
  }
 

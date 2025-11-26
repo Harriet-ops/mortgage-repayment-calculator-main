@@ -49,6 +49,7 @@ function CalculateMortgage(events){
     if(  mortgageAmount.value===""){
         showError(mortgageAmount, 'This field is required');
        parentInputbox.classList.add('invalid');
+       isValid=false;
     }
 
  if( mortgageTerms.value===""){
@@ -69,20 +70,20 @@ function CalculateMortgage(events){
     isValid=false;
  }
  if(isValid){
-       let principalAmount=mortgageAmount.value;
-       let interestRate= mortgageInterest.value;
-       let ratingYears= mortgageTerms.value;
+       
+       let interestRate= Number(mortgageInterest.value);
+       let ratingYears= Number(mortgageTerms.value);
        let repaymentsMonthly=0;
 
        if (mortgageOptions.value === 'Repayment') {
             let monthlyRate = (interest / 100) / 12;
-            let n = terms * 12;
+            let n = ratingYears* 12;
             repaymentsMonthly= numberValueMortgageAmount * monthlyRate * (Math.pow(1 + monthlyRate, n)) / (Math.pow(1 + monthlyRate, n) - 1);
         } 
         else if (mortgageOptions.value === 'Interest-Only') {
             monthlyRepayment = (numberValueMortgageAmount * (interestRate/ 100)) / 12;
         }
-
+ console.log('calculated:' ,repaymentsMonthly);
  }
 }
 

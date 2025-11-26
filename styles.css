@@ -31,7 +31,7 @@ main{
     background-color:hsl(202, 55%, 16%) ;
     border-bottom-right-radius: 15px;
     border-top-right-radius: 15px;
-    border-bottom-left-radius: 70px;
+    border-bottom-left-radius: 65px;
    text-align: center;
    color: white;
    padding: 1rem;
@@ -227,6 +227,15 @@ input[type="radio"]:active{
     margin-top: 10px;
 } 
 
-.invalid{
+.input-box.invalid{
+    background-color: red;
+    border-color: red;
+}
+.input-box1.invalid{
+    background-color: red;
+    border-color: red;
+}
+.input-box2.invalid{
+    background-color: red;
     border-color: red;
 }

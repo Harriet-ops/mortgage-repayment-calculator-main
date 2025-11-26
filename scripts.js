@@ -10,6 +10,9 @@ function CalculateMortgage(events){
     const mortgageInterest=document.querySelector('.mortgageInterest');
     const mortgageOptions= document.querySelector('input[name="options"]:checked');
     const optionsContainer=document.querySelector('.mortgage-type');
+    const parentInputbox= mortgageAmount.parentElement;
+    const parentInputbox1= mortgageTerms.parentElement;
+    const parentInputbox2= mortgageInterest.parentElement;
 
     let AmountText1= mortgageAmount.value.split(',').join('');
      let numberValueMortgageAmount = Number(AmountText1);
@@ -35,17 +38,17 @@ function CalculateMortgage(events){
 
     if(  mortgageAmount.value===""){
         showError(mortgageAmount, 'This field is required');
-       
+       parentInputbox.classList.add('invalid');
     }
 
  if( mortgageTerms.value===""){
     showError( mortgageTerms,'This field is required')
-    mortgageTerms.classList.add('invalid');
+     parentInputbox1.classList.add('invalid');
     isValid=false
  }
  if(mortgageInterest.value===""){
     showError(mortgageInterest, 'This field is required');
-    mortgageInterest.classList.add('invalid');
+     parentInputbox2.classList.add('invalid');
     isValid=false
  }
 

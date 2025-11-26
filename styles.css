@@ -162,7 +162,12 @@ label{
     outline: none;
     border: none; 
 }
-
+#condition{
+    height: 5vh;
+    width: 78%;
+    outline: none;
+    border: none; 
+}
 .input-years{
     padding-left: 1rem;
     padding-bottom: 0.5rem;

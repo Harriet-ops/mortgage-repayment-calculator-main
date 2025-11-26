@@ -1,0 +1,57 @@
+document.querySelector(".user-mortgage-form").addEventListener('submit',CalculateMortgage);
+
+
+
+function CalculateMortgage(events){
+    events.preventDefault();
+
+    const  mortgageAmount= document.querySelector('.moneyAmount');
+    const mortgageTerms= document.querySelector('.mortgageTerms');
+    const mortgageInterest=document.querySelector('.mortgageInterest');
+    const mortgageOptions= document.querySelector('input[name="options"]:checked');
+    const optionsContainer=document.querySelector('.mortgage-type');
+
+    let AmountText1= mortgageAmount.value.split(',').join('');
+     let numberValueMortgageAmount = Number(AmountText1);
+
+     console.log('clean amount:',numberValueMortgageAmount);
+
+    function showError(userMort, message){
+
+        userMort.classList.add('MessageError');
+
+        let errorMsg = document.createElement('p');
+        errorMsg.className = 'error';
+        errorMsg.textContent=message;
+        errorMsg.style.color='hsl(4, 69%, 50%) ' ;
+        userMort.parentElement.insertAdjacentElement('afterend', errorMsg);
+    }
+    document.querySelectorAll(".error").forEach(e => e.remove());
+    document.querySelectorAll(".MessageError").forEach(e => e.classList.remove("MessageError"));
+
+    let isValid= true;
+
+
+    if(  mortgageAmount.value===""){
+        showError(mortgageAmount, 'This field is required');
+        isValid=false
+    }
+
+ if( mortgageTerms.value===""){
+    showError( mortgageTerms,'This field is required')
+    isValid=false
+ }
+ if(mortgageInterest.value===""){
+    showError(mortgageInterest, 'This field is required')
+    isValid=false
+ }
+
+ if(!mortgageOptions ){
+       if(optionsContainer){
+               showError(optionsContainer,'This field is required');
+         }
+    isValid=false;
+ }
+}
+
+

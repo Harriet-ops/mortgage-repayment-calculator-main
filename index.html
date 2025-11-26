@@ -13,7 +13,7 @@
 <body>
 
       <main class="wrapper">
-           
+           <form class="user-mortgage-form">
            <div class="mortgage">
 
             <div class="heading">
@@ -26,15 +26,16 @@
 
                       <div class="input-box">
                             <span>£</span>
-                           <input type="number" id="euro">
+                           <input type="number" id="euro"class="moneyAmount">
                     </div>
+                    <!-- <p>this is bad</p> -->
            </div>
        <div class="terms-inputs">
 
            <div class="terms">
                    <label  id="mort-terms">Mortgage terms</label>
                       <section class="input-box1">
-                           <input type="number" id="years"  >
+                           <input type="number" id="years"  class="mortgageTerms">
                            <span class="input-years">years</span> 
                       </section>
            </div>
@@ -42,7 +43,7 @@
             <div class="terms">
                       <label  id="mort-interest">Interest rate</label>
                       <section class="input-box2">
-                           <input type="number" id="years"  >
+                           <input type="number" id="condition"   class="mortgageInterest">
                            <span class="input-years">%</span>
                       </section>
 
@@ -53,11 +54,11 @@
 
                     <div class="mortgage-type">
                          <section class="type1">
-                          <input type="radio" id="RepaymentOption" value="Repayment" class="types">Repayment
+                          <input type="radio" id="RepaymentOption" value="Repayment" class="types"name="options">Repayment
                         </section>
 
                         <section class="type2">
-                             <input type="radio" id="InterestOption" value="Interest-Only" class="types">Interest-Only
+                             <input type="radio" id="InterestOption" value="Interest-Only" class="types" name="options">Interest-Only
                         </section>
                     </div>
             </div>
@@ -71,6 +72,7 @@
                 </div>
 
            </div>
+           </form>
 
            <div class="result">
             <img src="assets/images/illustration-empty.svg" alt="illustration-empty" id="pay-image">
@@ -82,7 +84,7 @@
 
       </main>
   
-  
+  <script src="scripts.js"></script>
   
 </body>
 </html>

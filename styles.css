@@ -44,15 +44,17 @@ main{
 }
 .shown{
    position: absolute;
-    bottom: 30%;
+    bottom: 35%;
     right:10% ;
     font-size: 2em;
 }
 
 .statement{
    position: absolute;
-    bottom: 20%;
-    padding-left: 1rem;
+    bottom: 23%;
+    text-align: center;
+    padding: 1rem;
+    margin:0 auto ;
 }
 
 .mortgage{
@@ -212,7 +214,7 @@ input[type="radio"]:active{
     width: 70%;
     margin: 3rem 0rem 0rem 0rem;
     border: none;
-    border-radius: 20px;
+    border-radius: 50px;
      display: flex;
      align-items: center;
      justify-content: center;
@@ -283,4 +285,50 @@ h4{
 }
 .finalResult{
     margin-top: 0.5rem;
+}
+@media(min-width:1900px){
+    .statement{
+        display: flex;
+        padding-left: 70px;
+        font-size: 1.1rem;
+        color: hsl(200, 17%, 65%);
+    }
+    #pay-image{
+        width: 23%;
+    
+        
+    }
+    h2{
+        padding-right: 2rem;
+    }
+    .type1, .type2{
+        height: 7vh;
+    }
+    .input-box{
+        height:6vh ;
+    }
+    #euro{
+        height: 5.8vh;
+    }
+    .input-box1, .input-box2{
+        height: 6vh;
+    }
+    #years{
+        height: 5.7vh;
+    }
+    #condition{
+        height: 5.7vh;
+    }
+    .calculation{
+        height: 8vh;
+        font-size: 1.3rem;
+    }
+    span{
+        padding-top: 0.8rem;
+        padding-right: 0.7rem;
+        font-size: 1.3rem;
+    }
+    .heading{
+        gap: 13rem;
+    }
 }

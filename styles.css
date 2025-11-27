@@ -336,8 +336,30 @@ h4{
     .heading{
         gap: 13rem;
     }
+.resultWritings{
+    font-size: 1.3rem;
+}
+.amountDisplaybox{
+    margin-top: 5rem;
+}
+.complete{
+    font-size: 1.8rem;
+}
+.update,.repay{
+    font-size: 1.2rem;
+}
+.finalResult{
+    font-size: 1.3rem;
+}
+hr{
+    margin-top: 2rem;
+    margin-bottom: 2.5rem;
+}
+h3{
+    font-size: 5rem;
+}
 }
 
 @media(min-width:375px){
-    
+
 }

@@ -69,7 +69,7 @@ Mortgage Calculator
 
   Your monthly repayments
 
-  Total you'll repay over the term
+  
 
   <!-- Completed results end -->
 

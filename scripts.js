@@ -74,17 +74,49 @@ function CalculateMortgage(events){
        let interestRate= Number(mortgageInterest.value);
        let ratingYears= Number(mortgageTerms.value);
        let repaymentsMonthly=0;
+       let selectedValue=mortgageOptions.value;
 
-       if (mortgageOptions.value === 'Repayment') {
-            let monthlyRate = (interest / 100) / 12;
+       if (selectedValue === 'Repayment') {
+            let monthlyRate = (interestRate / 100) / 12;
             let n = ratingYears* 12;
             repaymentsMonthly= numberValueMortgageAmount * monthlyRate * (Math.pow(1 + monthlyRate, n)) / (Math.pow(1 + monthlyRate, n) - 1);
         } 
-        else if (mortgageOptions.value === 'Interest-Only') {
-            monthlyRepayment = (numberValueMortgageAmount * (interestRate/ 100)) / 12;
+        else if (selectedValue === 'Interest-Only') {
+            repaymentsMonthly = (numberValueMortgageAmount * (interestRate/ 100)) / 12;
         }
  console.log('calculated:' ,repaymentsMonthly);
+
+       const emptyState = document.querySelector('.emptyResult');
+    const completedState = document.querySelector('.CompleteResult');
+
+    if(emptyState) {
+        emptyState.hidden=true;
+        
+
+    }
+    if(completedState) {
+        completedState.hidden=false;
+        
+    }
+ let totalRepay=repaymentsMonthly*ratingYears*12;
+
+    const resultDisplay = document.querySelector('.monthlyRepayment');
+       if(resultDisplay) {
+        resultDisplay.innerText = "£" + repaymentsMonthly.toLocaleString(undefined, {
+            minimumFractionDigits: 2, 
+            maximumFractionDigits: 2
+        });
+    }
+    const totalDisplay=document.querySelector('.finalResult');
+    if(totalDisplay){
+        totalDisplay.innerText="£ "+ totalRepay.toLocaleString(undefined,{
+            minimumFractionDigits:2,
+            maximumFractionDigits:2
+        })
+    }
  }
+
+    
 }
 
 

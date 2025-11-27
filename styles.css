@@ -32,7 +32,6 @@ main{
     border-bottom-right-radius: 15px;
     border-top-right-radius: 15px;
     border-bottom-left-radius: 65px;
-   text-align: center;
    color: white;
    padding: 1rem;
 
@@ -238,4 +237,50 @@ input[type="radio"]:active{
 .input-box2.invalid{
     background-color: red;
     border-color: red;
+}
+
+[hidden]{
+    display: none  !important;
+}
+
+.CompleteResult{
+    display: block;
+    padding: 2rem;
+    text-align: unset;
+    
+}
+
+.resultWritings{
+    margin:1rem 0rem 0rem 0rem ;
+    color:hsl(200, 40%, 71%) ;
+}
+.amountDisplaybox{
+    background-color:hsl(202, 47%, 11%) ;
+    box-shadow: inset 0px 4px 0px 0px hsl(61, 70%, 52%) ;
+    margin-top: 3rem;
+    height: 36vh;
+    border-radius: 10px;
+    padding: 1.5rem;
+    
+}
+h3{
+    font-size: 4rem;
+    margin-bottom: 1.5rem;
+    margin-top: 0.5rem;
+    color:hsl(61, 70%, 52%) ;
+}
+
+hr{
+    margin-bottom: 1.3rem;
+}
+h4{
+    font-family: 'Plus Jakarta',sans-serif;
+    font-size: 1.5rem;
+    margin-top: 0.5rem;
+}
+.update,.repay{
+    color: hsl(200, 40%, 71%) ;
+}
+.finalResult{
+    margin-top: 0.5rem;
 }

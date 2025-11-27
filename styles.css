@@ -97,6 +97,7 @@ h1{
     width: 100%;
     outline: none;
     border: none;
+    padding: 0.5rem;
   
 }
 
@@ -162,12 +163,14 @@ label{
     width: 78%;
     outline: none;
     border: none; 
+     padding: 0.5rem;
 }
 #condition{
     height: 5vh;
     width: 78%;
     outline: none;
     border: none; 
+     padding: 0.5rem;
 }
 .input-years{
     padding-left: 1rem;
